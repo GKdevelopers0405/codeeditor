@@ -1,23 +1,55 @@
 <!DOCTYPE html>
 <html>
-
 <head>
-    <title>Code Editor</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <link rel="stylesheet" href="style.css">
+    <title>Code Editor</title> <!-- Title of the webpage -->
+    <meta name="viewport" content="width=device-width, initial-scale=1"> <!-- Responsive viewport settings -->
+    <link rel="stylesheet" href="style.css"> <!-- Link to external CSS file -->
 </head>
 
-<body id="grad">
-    <h1> Live Code Editor </h1>
+<body>
+    <h1> Live Code Editor </h1> <!-- Heading for the page -->
 
-    <textarea id="html" placeholder="HTML"></textarea>
-    <textarea id="css" placeholder="CSS"></textarea>
-    <textarea id="js" placeholder="JavaScript"></textarea>
-    <iframe id="code"></iframe>
+    <!-- Main container for the code editor -->
+    <div class="container">
+        <!-- Container for code input and tabs -->
+        <div class="code-container ">
+            <!-- Tabs for switching between HTML, CSS, and JavaScript -->
+            <div class="tabs">
+                <!-- Button for HTML tab -->
+                <div class="button active" data-target="html">
+                    HTML
+                </div>
+    
+                <!-- Button for CSS tab -->
+                <div class="button" data-target="css">
+                    CSS
+                </div>
+    
+                <!-- Button for JavaScript tab -->
+                <div class="button" data-target="js">
+                    JavaScript
+                </div>
+            </div>
 
+            <!-- Container for textareas -->
+            <div class="sections">
+                <!-- Textarea for HTML code -->
+                <textarea id="html" placeholder="HTML" class="textarea-active"></textarea>
+                <!-- Textarea for CSS code -->
+                <textarea id="css" placeholder="CSS" class=""></textarea>
+                <!-- Textarea for JavaScript code -->
+                <textarea id="js" placeholder="JavaScript" class=""></textarea>
+            </div>
+        </div>
+
+        <!-- Output container for displaying result -->
+        <div class="output">
+            <!-- Iframe for displaying the live result -->
+            <iframe id="code"></iframe>
+        </div>
+    </div>
+
+    <!-- Script tag to include JavaScript file -->
     <script type="text/javascript" src="app.js"></script>
-
 </body>
-
 </html>

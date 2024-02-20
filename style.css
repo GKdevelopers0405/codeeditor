@@ -1,38 +1,120 @@
-#grad {
-    height: 100%;
-    background-image: radial-gradient( circle 780.6px at 10% 20%, rgba(133, 255, 189, 1) 0%, rgb(0, 94, 120) 90.7%);
-}
+/* Import Google Fonts Roboto with various weights */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
+/* Apply styles to the body element */
 body {
-    text-align: center;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: rgb(45, 39, 39); /* Set background color */
+    text-align: center; /* Center-align text */
+    color: white; /* Set text color */
+    font-family: "Roboto","sans-serif"; /* Set font family */
 }
 
+/* Apply styles to h1 elements */
 h1 {
-    color: #EDf5e1;
+    margin: 5px 0px; /* Set top and bottom margin */
 }
 
-textarea {
-    width: 32%;
-    min-height: 250px;
-    overflow: scroll;
-    margin: auto;
-    display: inline-block;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(0, 152, 155, 1) 0.1%, rgba(0, 94, 120, 1) 94.2%);
-    outline: none;
-    font-family: Courier, sans-serif;
-    font-size: 14px;
-    color: rgb(255, 255, 255);
-    ;
+/* Define styles for the container element */
+.container {
+    height: 90vh; /* Set height to 90% of viewport height */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange items in a column */
 }
 
-textarea::placeholder {
-    color: rgb(255, 255, 255);
+/* Define styles for the code container */
+.code-container {
+    height: 50%; /* Set height to 50% of the parent container */
+    display: flex; /* Use flexbox layout */
+    flex-direction: column; /* Arrange items in a column */
+    margin: 0px 10px 20px 10px; /* Set margins */
+    gap: 10px; /* Set gap between child elements */
 }
 
+/* Define styles for the output section */
+.output {
+    height: 50%; /* Set height to 50% of the parent container */
+    margin: 10px; /* Set margins */
+}
+
+/* Apply styles to iframes */
 iframe {
-    bottom: 0;
-    position: relative;
-    width: 100%;
-    height: 15em;
-    background-image: radial-gradient( circle farthest-corner at 10% 20%, rgba(234, 249, 249, 0.67) 0.1%, rgba(239, 249, 251, 0.63) 90.1%);
+    height: 100%; /* Set height to 100% */
+    width: 100%; /* Set width to 100% */
+    background-color: #fff; /* Set background color */
+}
+
+/* Define styles for tabs */
+.tabs {
+    display: flex; /* Use flexbox layout */
+}
+
+/* Define styles for sections */
+.sections {
+    display: flex; /* Use flexbox layout */
+    flex-grow: 1; /* Allow sections to grow */
+}
+
+/* Define styles for buttons */
+.button {
+    background-color:rgb(35, 35, 35); /* Set background color */
+    padding: 6px 8px; /* Set padding */
+    margin: 0px 5px; /* Set margins */
+    border-radius: 5px; /* Set border radius */
+}
+
+/* Define styles for active tabs */
+.tabs .active {
+    background-color: hsl( 227.37deg 12.26% 30.39% ); /* Set background color */
+}
+
+/* Define styles for the first child button */
+.button:first-child {
+    margin-left: 0px; /* Remove left margin */
+}
+
+/* Define styles for textareas */
+textarea {
+    display: none; /* Hide textareas by default */
+    overflow: scroll; /* Allow scrolling */
+    width: 100%; /* Set width to 100% */
+    height: 100%; /* Set height to 100% */
+    padding: 10px; /* Set padding */
+    outline: none; /* Remove outline */
+    background-color: rgb(43, 43, 43); /* Set background color */
+    color: white; /* Set text color */
+}
+
+/* Define styles for active textareas */
+.textarea-active {
+    display: block; /* Display active textareas */
+}
+
+/* Define styles for textarea placeholders */
+textarea::placeholder {
+    color: rgb(255, 255, 255); /* Set placeholder color */
+}
+
+/* Media query for screens with minimum width 968px */
+@media screen and (min-width: 968px) {
+    /* Show HTML, CSS, and JS textareas */
+    #html, #css, #js {
+        display: block;
+    }
+    
+    /* Set column gap for sections */
+    .sections {
+        column-gap: 10px;
+    }
+    
+    /* Set background color for active tabs */
+    .tabs .active {
+        background-color: rgb(53, 53, 53);
+    }
+    
+    /* Align tabs evenly */
+    .tabs {
+        justify-content: space-evenly;
+    }
 }
